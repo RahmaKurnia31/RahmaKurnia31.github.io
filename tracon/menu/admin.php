@@ -1,0 +1,95 @@
+<nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <li class="nav-item">
+            <a href="index.php?page=dashboard" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              
+               <p>
+                Halaman Utama
+                <span class="right badge badge-danger"></span>
+              </p>
+            </a>
+          </li>
+         
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Kelola Karyawan
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="index.php?page=data-karyawan" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Diri Karyawan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?page=data-cutikaryawan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Cuti Karyawan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?page=data-akun" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kelola Akun Karyawan</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-download"></i>
+              <p>
+                Approval
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="index.php?page=wait-approve" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Menunggu Approval</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?page=data-cutikaryawan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Approved</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.php?page=data-semua" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Semua data</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="index.php?page=laporan" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+               <p>
+                Laporan
+                <span class=""></span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link text-red">
+              <i class="nav-icon fas fa-power-off"></i>
+               <p>
+                Log out
+                <span class="right badge badge-danger"></span>
+              </p>
+            </a>
+          </li>
+         
+    

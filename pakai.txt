@@ -1,0 +1,70 @@
+<?php
+$npk =$_GET['npk'];
+$query = mysqli_query($koneksi,"SELECT * FROM pakai WHERE npk='$npk'");
+$vies = mysqli_fetch_array($query);
+?>
+
+<section class="content">
+    <div class="container-fluid">
+  <div class="card card-warning">
+  <div class="card-header">
+    <h3 class="card-title">Pakai Cuti Karyawan</h3>
+  </div>
+  <?php 
+                  $no = 0;
+                    $query = mysqli_query($koneksi,"SELECT * FROM pakai");
+                    while ($view = mysqli_fetch_array ($query)){
+                      $no++
+                    ?> 
+  <!-- /.card-header -->
+  <div class="card-body">
+    <form method="get" action='add/tambah_pakai.php'>
+    <div class="modal-body">
+    <td><?php echo $no;?></td>
+                    <div class="form-row">
+                      <div class="col">
+                      <label for="Tambah Jatah Cuti" class="form-label">NPK</label>
+                        <input type="text" class="form-control" placeholder="Masukan NPK" name="npk" value="<?php echo $view['npk'];?>">
+                      </div>
+                      <div class="col">
+                      <label for="Tambah Jatah Cuti" class="form-label">Nama</label>
+                        <input type="text" class="form-control" placeholder="Masukan Nama Karyawan" name="nama" value="<?php echo $view['nama'];?>">
+
+                    <div class="col">
+                      <div class="form-group col">
+                      <label for="inputState">Divisi</label>
+                      <select id="inputState" class="form-control" placeholder="Pilih" name="divisi" value="<?php echo $view['divisi'];?>">
+                      <option>Pilih</option> 
+                      <option>Plant Manager</option>
+                        <option>Opersi</option>
+                        <option>Maintenance</option>
+                        <option>HSE</option>
+                        <option>FA/GA/ADM</option>
+                      </select>
+                   </div>
+                   <div class="col">
+                      <div class="form-group col">
+                      <label for="inputState">Jenis Cuti</label>
+                      <select id="inputState" class="form-control" placeholder="Pilih" name="jenis" value="<?php echo $view['jenis'];?>">
+                      <option>Pilih</option> 
+                      <option>Cuti Tahunan</option>
+                        <option>Cuti Sakit</option>
+                        <option>Izin Menikah</option>
+                        <option>Cuti Hamil atau melahirkan</option>
+                        <option>Izin Karena Alasan Penting</option>
+                        <option>Cuti Lain-lain</option>
+                    </select>
+                   </div>
+                   <div class="modal-footer justify-content-between">
+            <button type="submit" class="btn btn-primary">Simpan</button>  
+            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+            
+            </div>
+    </form>
+  </div>
+  <!-- /.card-body -->
+</div>
+</div>
+</section>
+
+                      <?php }?>
